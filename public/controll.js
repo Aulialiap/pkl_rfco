@@ -118,7 +118,7 @@ function createSystemCard(key, data) {
         </div>
         <div class="current-path">
             <div class="current-path-label">Jalur Aktif Saat Ini</div>
-            <div class="current-path-value" id="current-path-${key}">Unknown</div>
+            <div class="current-path-value" id="current-path-${key}">Jalur ${data.currentPath}</div>
         </div>
         <div class="switch-controls">
             <button class="switch-button switch-path-normal" onclick="switchToPath('${key}', 'normal')" id="switch-normal-${key}" disabled>🔄 Jalur Utama</button>

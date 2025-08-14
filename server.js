@@ -54,6 +54,40 @@ app.post('/api/location/:name', (req, res) => {
     });
 });
 
+// Endpoint: delete location by name
+app.delete('/api/location/:name', (req, res) => {
+    const locationName = decodeURIComponent(req.params.name);
+
+    fs.readFile(DATA_FILE, 'utf8', (err, data) => {
+        if (err) return res.status(500).json({ success: false, error: 'Gagal membaca file' });
+
+        let allLocations;
+        try {
+            allLocations = JSON.parse(data);
+        } catch (e) {
+            return res.status(500).json({ success: false, error: 'Format JSON salah' });
+        }
+
+        const keyToDelete = Object.keys(allLocations).find(
+            k => k.toLowerCase() === locationName.toLowerCase()
+        );
+
+        if (!keyToDelete) {
+            return res.status(404).json({ success: false, error: 'Lokasi tidak ditemukan' });
+        }
+
+
+        delete allLocations[locationName];
+
+        fs.writeFile(DATA_FILE, JSON.stringify(allLocations, null, 2), 'utf8', (err) => {
+            if (err) return res.status(500).json({ success: false, error: 'Gagal menyimpan file' });
+
+            res.json({ success: true });
+        });
+    });
+});
+
+
 app.post('/api/esp-proxy', async (req, res) => {
     const { ip, endpoint, body } = req.body;
 
@@ -77,6 +111,6 @@ app.post('/api/esp-proxy', async (req, res) => {
 
 
 // Start server
-app.listen(PORT, '0.0.0.0',() => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`RFCO server aktif di http://localhost:${PORT}`);
 });

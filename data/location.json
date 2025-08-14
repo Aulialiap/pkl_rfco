@@ -1,6 +1,6 @@
 {
   "GPON00-D5-PRN-3 TO ME-D5-KD": {
-    "speed": "2 X 10 Gbps",
+    "speed": "2 X 10 Gb",
     "esp1": "10.116.18.29",
     "esp2": "10.116.18.30",
     "systems": {
@@ -29,7 +29,7 @@
     }
   },
   "GPON00-D5-PRN-3 TO ME-D5-KM": {
-    "speed": "2 X 10 Gbps",
+    "speed": "2 X 10 Gb",
     "esp1": "192.168.2.100",
     "esp2": "192.168.2.101",
     "systems": {
@@ -46,35 +46,6 @@
         "port2": "GBI/7/1/2",
         "jalur_normal": "KT Corning PML - SBY",
         "jalur_backup": "KT Voksel PML - SBY"
-      }
-    }
-  },
-  "GPON-01": {
-    "speed": "2 x 30 Gb",
-    "esp1": "10.119.40.50",
-    "esp2": "10.119.40.100",
-    "systems": {
-      "A": {
-        "name": "Sistem 1",
-        "hostname1": "HUTAN",
-        "hostname2": "DANAU",
-        "port1": "10",
-        "port2": "11",
-        "jalur_normal": "",
-        "jalur_backup": "",
-        "currentPath": "Unknown",
-        "index": 1
-      },
-      "B": {
-        "name": "Sistem 2",
-        "hostname1": "PANTAI",
-        "hostname2": "GUNUNG",
-        "port1": "500",
-        "port2": "600",
-        "jalur_normal": "",
-        "jalur_backup": "",
-        "currentPath": "Unknown",
-        "index": 2
       }
     }
   }

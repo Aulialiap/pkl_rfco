@@ -228,11 +228,15 @@ async function confirmDeleteLocation() {
     if (!locationToDelete) return;
 
     try {
+        //fetch(`/api/location/${encodeURIComponent(locationToDelete)}`, {
         const response = await fetch(`/api/location/${encodeURIComponent(locationToDelete)}`, {
             method: 'DELETE'
         });
-
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
         const result = await response.json();
+        
         if (result.success) {
             delete allLocations[locationToDelete];
             displayLocations(allLocations);
