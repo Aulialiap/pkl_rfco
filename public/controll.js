@@ -101,13 +101,13 @@ function createSystemCard(key, data) {
             <div class="path-row">
                 <div class="path-label">Jalur Utama :</div>
                 <div class="path-value">
-                    <input type="text" value="Jalur Utama (${data.jalur_normal})" onchange="updateSystemPath('${key}', 'jalur_normal', this.value)">
+                    <input type="text" value="${data.jalur_normal}" onchange="updateSystemPath('${key}', 'jalur_normal', this.value)">
                 </div>
             </div>
             <div class="path-row">
                 <div class="path-label">Jalur Backup :</div>
                 <div class="path-value">
-                    <input type="text" value="Jalur Backup (${data.jalur_backup})" onchange="updateSystemPath('${key}', 'jalur_backup', this.value)">
+                    <input type="text" value="${data.jalur_backup}" onchange="updateSystemPath('${key}', 'jalur_backup', this.value)">
                 </div>
             </div>
             <div class="save-configuration">

@@ -48,5 +48,34 @@
         "jalur_backup": "KT Voksel PML - SBY"
       }
     }
+  },
+  "GPON-01": {
+    "speed": "2 x 30 Gb",
+    "esp1": "10.119.40.50",
+    "esp2": "10.119.40.100",
+    "systems": {
+      "A": {
+        "name": "Sistem 1",
+        "hostname1": "HUTAN",
+        "hostname2": "DANAU",
+        "port1": "10",
+        "port2": "11",
+        "jalur_normal": "",
+        "jalur_backup": "",
+        "currentPath": "Unknown",
+        "index": 1
+      },
+      "B": {
+        "name": "Sistem 2",
+        "hostname1": "PANTAI",
+        "hostname2": "GUNUNG",
+        "port1": "500",
+        "port2": "600",
+        "jalur_normal": "",
+        "jalur_backup": "",
+        "currentPath": "Unknown",
+        "index": 2
+      }
+    }
   }
 }

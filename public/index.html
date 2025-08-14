@@ -21,19 +21,71 @@
                 <button class="clear-search" id="clearSearch">✕</button>
                 <span class="search-icon">🔍</span>
             </div>
+            <button class="add-location-btn" onclick="showAddLocationModal()">
+                ➕ Tambah Lokasi
+            </button>
         </div>
 
         <div class="list-section">
-            <h3>🌍 Pilih Lokasi </h3>
+            <h3>🌍 Pilih Lokasi</h3>
             <!-- Lokasi akan di-generate oleh JavaScript -->
         </div>
 
         <div class="footer">
-            <p>RFCO v3.0 - Multi-location ESP32 Relay Controller</p>
+            <p>RFCO v3.1 - Multi-location ESP32 Relay Controller</p>
             <p>Fiber Optic Path Switching Management System</p>
         </div>
     </div>
-    <script src="index.js"></script>
+
+    <!-- Add Location Modal -->
+    <div class="modal-overlay" id="addLocationModal">
+        <div class="modal">
+            <h3>➕ Tambah Lokasi Baru</h3>
+            <form id="addLocationForm">
+                <div class="form-group">
+                    <label for="locationName">Nama Lokasi:</label>
+                    <input type="text" id="locationName" name="locationName" required 
+                           placeholder="Contoh: GPON00-D5-PRN-4 TO ME-D5-KD">
+                </div>
+                <div class="form-group">
+                    <label for="locationSpeed">Kapasitas:</label>
+                    <input type="text" id="locationSpeed" name="locationSpeed" required 
+                           placeholder="Contoh: 2 X 10 Gbps">
+                </div>
+                <div class="form-group">
+                    <label for="esp1IP">IP Node A:</label>
+                    <input type="text" id="esp1IP" name="esp1IP" required 
+                           placeholder="Contoh: 10.116.18.29">
+                </div>
+                <div class="form-group">
+                    <label for="esp2IP">IP Node B:</label>
+                    <input type="text" id="esp2IP" name="esp2IP" required 
+                           placeholder="Contoh: 10.116.18.30">
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="hideAddLocationModal()">Batal</button>
+                    <button type="submit" class="btn btn-primary">Tambah Lokasi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="deleteConfirmModal">
+        <div class="modal">
+            <h3>🗑️ Konfirmasi Hapus</h3>
+            <p style="margin: 20px 0; text-align: center;">
+                Apakah Anda yakin ingin menghapus lokasi <strong id="deleteLocationName"></strong>?
+            </p>
+            <div class="modal-buttons">
+                <button type="button" class="btn btn-secondary" onclick="hideDeleteConfirmModal()">Batal</button>
+                <button type="button" class="btn" style="background: #f56565; color: white;" onclick="confirmDeleteLocation()">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+     <script src="index.js"></script>
 </body>
 
 </html>
