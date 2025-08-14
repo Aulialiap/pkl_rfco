@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RFCO - System Controller</title>
+    <link rel="stylesheet" href="controll.css" />
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()">←</button>
+
+        <div class="header">
+            <div class="logo">RFCO</div>
+            <div class="subtitle">ESP32 Switch Controller - Multi System Control</div>
+        </div>
+
+        <div class="location-info">
+            <div class="location-name" id="location-display">Loading...</div>
+            <div class="location-speed" id="location-speed">Loading...</div>
+
+            <div class="esp-connections">
+                <div class="esp-info">
+                    <div class="esp-label">IP Node A</div>
+                    <div class="esp-ip">
+                        <input type="text" id="esp1-ip" onchange="updateESPIP('esp1', this.value)">
+                    </div>
+                    <div class="esp-status">
+                        <div class="status-light" id="esp1-status"></div>
+                        <span id="esp1-status-text">Offline</span>
+                    </div>
+                </div>
+                <div class="esp-info">
+                    <div class="esp-label">IP Node B</div>
+                    <div class="esp-ip">
+                        <input type="text" id="esp2-ip" onchange="updateESPIP('esp2', this.value)">
+                    </div>
+                    <div class="esp-status">
+                        <div class="status-light" id="esp2-status"></div>
+                        <span id="esp2-status-text">Offline</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connect-section">
+                <button class="connect-button" onclick="connectAllESP()">
+                    🔗 Connect
+                </button>
+                <div class="save-configuration">
+                    <button class="save-button" onclick="saveAllConfigurations()">
+                        💾 Save
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="systems-grid" id="systems-container">
+            <!-- Systems will be loaded here -->
+        </div>
+
+        <div class="footer">
+            <p>RFCO v3.0 - Multi-System ESP32 Relay Controller</p>
+            <p>Fiber Optic Path Switching Management System</p>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+    <script src="controll.js"></script>
+</body>
+</html>

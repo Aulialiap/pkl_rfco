@@ -1,0 +1,52 @@
+{
+  "GPON00-D5-PRN-3 TO ME-D5-KD": {
+    "speed": "2 X 10 Gbps",
+    "esp1": "10.116.18.29",
+    "esp2": "10.116.18.30",
+    "systems": {
+      "A": {
+        "name": "Sistem 1",
+        "hostname1": "GPON 00",
+        "hostname2": "BINTANG",
+        "port1": "XGEI/19/1/1",
+        "port2": "GBI/6/1/1",
+        "jalur_normal": "KT Corning KD - PRB",
+        "jalur_backup": "KT Voksel KD - PRB",
+        "currentPath": "Unknown",
+        "index": 1
+      },
+      "B": {
+        "name": "Sistem 2",
+        "hostname1": "MATAHARI",
+        "hostname2": "METEOR SIA",
+        "port1": "XGEI/19/1/2",
+        "port2": "GBI/6/1/2",
+        "jalur_normal": "KT Corning BTG - JKT",
+        "jalur_backup": "KT Voksel BTG - KDR",
+        "currentPath": "Unknown",
+        "index": 2
+      }
+    }
+  },
+  "GPON00-D5-PRN-3 TO ME-D5-KM": {
+    "speed": "2 X 10 Gbps",
+    "esp1": "192.168.2.100",
+    "esp2": "192.168.2.101",
+    "systems": {
+      "A": {
+        "name": "Sistem 1",
+        "port1": "XGEI/20/1/1",
+        "port2": "GBI/7/1/1",
+        "jalur_normal": "KT Corning PML - JKT",
+        "jalur_backup": "KT Voksel PML - JKT"
+      },
+      "B": {
+        "name": "Sistem 2",
+        "port1": "XGEI/20/1/2",
+        "port2": "GBI/7/1/2",
+        "jalur_normal": "KT Corning PML - SBY",
+        "jalur_backup": "KT Voksel PML - SBY"
+      }
+    }
+  }
+}
