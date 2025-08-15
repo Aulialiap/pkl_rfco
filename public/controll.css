@@ -174,14 +174,15 @@
             background: #48bb78;
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             font-weight: 600;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .connect-button:hover {
-            background: #38a169;
+            background: #48bb78;
+            transform: translateY(-2px);
         }
 
         .save-button {
@@ -189,15 +190,63 @@
             background: #4299e1;
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 10px;
             cursor: pointer;
             font-weight: 500;
             font-size: 0.9em;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .save-button:hover {
-            background: #3182ce;
+            background: #4299e1;
+            transform: translateY(-2px);
+        }
+
+        .add-system-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color : whitesmoke;
+            border :  none;
+            padding: 10px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.0em;
+            font-weight: 500;
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+        }
+
+        .add-system-btn:hover{
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transform: translateY(-2px);
+        }
+
+        .delete-system-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            /* box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3); */
+            position: relative;
+        }
+
+        .delete-system-btn:hover {
+            background: linear-gradient(135deg, #ff5252, #e53e3e);
+            transform: translateY(-2px);
+            /* box-shadow: 0 6px 10px rgba(255, 107, 107, 0.4); */
         }
 
         .systems-grid {
